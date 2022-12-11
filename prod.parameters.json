@@ -3,16 +3,16 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "appServiceAppName1": {
-            "value": "msanroman-app-prod-be"
+            "value": "portega-app-prod-be"
         },
         "appServiceAppName3": {
-            "value": "msanroman-app-prod-fe"
+            "value": "portega-app-prod-fe"
         },
         "appServicePlanName1": {
-            "value": "msanroman-app-prod"
+            "value": "portega-app-prod"
         },
         "storageAccountName": {
-            "value": "msanromanprodstorage"
+            "value": "portegaprodstorage"
         },
         "environmentType": {
             "value": "prod"
