@@ -3,13 +3,13 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "appServiceAppName1": {
-            "value": "portega-app-prod-be"
+            "value": "portega-assignment-be-pr"
         },
         "appServiceAppName3": {
-            "value": "portega-app-prod-fe"
+            "value": "portega-assignment-fe-pr"
         },
         "appServicePlanName1": {
-            "value": "portega-app-prod"
+            "value": "portega-assignment-pr"
         },
         "storageAccountName": {
             "value": "portegaprodstorage"
