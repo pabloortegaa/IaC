@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "appServiceAppName2": {
+            "value": "msanroman-app-dev-be"
+        },
+        "appServiceAppName4": {
+            "value": "msanroman-app-dev-fe"
+        },
+        "appServicePlanName2": {
+            "value": "msanroman-app-dev"
+        },
+        "storageAccountName": {
+            "value": "msanromandevstorage"
+        },
+        "environmentType": {
+            "value": "nonprod"
+        }
+    }
+}

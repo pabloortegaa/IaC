@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "appServiceAppName1": {
+            "value": "msanroman-app-prod-be"
+        },
+        "appServiceAppName3": {
+            "value": "msanroman-app-prod-fe"
+        },
+        "appServicePlanName1": {
+            "value": "msanroman-app-prod"
+        },
+        "storageAccountName": {
+            "value": "msanromanprodstorage"
+        },
+        "environmentType": {
+            "value": "prod"
+        }
+    }
+}
