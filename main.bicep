@@ -1,30 +1,30 @@
 @sys.description('The Web App name.')
 @minLength(3)
 @maxLength(30)
-param appServiceAppName1 string = 'msanroman-app-prod-be'
+param appServiceAppName1 string = 'portega-assignment-be-pr'
 @sys.description('The Web App name.')
 @minLength(3)
 @maxLength(30)
-param appServiceAppName3 string = 'msanroman-app-prod-fe'
+param appServiceAppName3 string = 'portega-assignment-fe-pr'
 @sys.description('The App Service Plan name.')
 @minLength(3)
 @maxLength(30)
-param appServicePlanName1 string = 'msanroman-app-prod'
+param appServicePlanName1 string = 'portega-assignment-pr'
 @sys.description('The Web App name.')
 @minLength(3)
 @maxLength(30)
-param appServiceAppName2 string = 'msanroman-app-dev-be'
+param appServiceAppName2 string = 'portega-assignment-be-dv'
 @minLength(3)
 @maxLength(30)
-param appServiceAppName4 string = 'msanroman-app-dev-fe'
+param appServiceAppName4 string = 'portega-assignment-fe-dv'
 @sys.description('The App Service Plan name.')
 @minLength(3)
 @maxLength(30)
-param appServicePlanName2 string = 'msanroman-app-dev'
+param appServicePlanName2 string = 'portega-assignment-dv'
 @sys.description('The Storage Account name.')
 @minLength(3)
 @maxLength(30)
-param storageAccountName string = 'msanromanstorage'
+param storageAccountName string = 'portegastorage'
 @allowed([
   'nonprod'
   'prod'
@@ -108,3 +108,4 @@ module appService4 'modules/appStuff.bicep' = if (environmentType == 'nonprod') 
 
   output appServiceAppHostName1 string = (environmentType == 'prod') ? appService1.outputs.appServiceAppHostName : appService2.outputs.appServiceAppHostName
   output appServiceAppHostName2 string = (environmentType == 'prod') ? appService3.outputs.appServiceAppHostName : appService4.outputs.appServiceAppHostName
+    
