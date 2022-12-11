@@ -3,16 +3,16 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "appServiceAppName2": {
-            "value": "msanroman-app-dev-be"
+            "value": "portega-assignment-be-dv"
         },
         "appServiceAppName4": {
-            "value": "msanroman-app-dev-fe"
+            "value": "portega-assignment-fe-dv"
         },
         "appServicePlanName2": {
-            "value": "msanroman-app-dev"
+            "value": "portega-assignment-dv"
         },
         "storageAccountName": {
-            "value": "msanromandevstorage"
+            "value": "portegadevstorage"
         },
         "environmentType": {
             "value": "nonprod"
