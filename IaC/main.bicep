@@ -1,19 +1,19 @@
 @sys.description('The FE Web App name.')
 @minLength(3)
 @maxLength(30)
-param appServiceAppNameFe string = 'dsanmart-fe-app-bicep'
+param appServiceAppNameFe string = 'portega--fe-app-bicep'
 @sys.description('The BE Web App name.')
 @minLength(3)
 @maxLength(30)
-param appServiceAppNameBe string = 'dsanmart-be-app-bicep'
+param appServiceAppNameBe string = 'portega--be-app-bicep'
 @sys.description('The App Service Plan name.')
 @minLength(3)
 @maxLength(24)
-param appServicePlanName string = 'dsanmart-app-bicep'
+param appServicePlanName string = 'portega--app-bicep'
 @sys.description('The Storage Account name.')
 @minLength(3)
 @maxLength(24)
-param storageAccountName string = 'dsanmartstorage'
+param storageAccountName string = 'portega-storage'
 @sys.description('The environment type.')
 @allowed([
   'nonprod'
@@ -32,7 +32,7 @@ param postgreServerName string = 'jseijas-dbsrv'
 @sys.description('The PostgreSQL database name.')
 @minLength(3)
 @maxLength(30)
-param dbname string = 'dsanmart-db'
+param dbname string = 'portega--db'
 
 resource storageAccount 'Microsoft.Storage/storageAccounts@2022-05-01' = {
   name: storageAccountName

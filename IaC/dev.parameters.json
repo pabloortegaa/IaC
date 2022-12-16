@@ -6,19 +6,19 @@
             "value": "nonprod"
         },
         "appServiceAppNameBe": {
-            "value": "dsanmart-recipeapp-BE-dev"
+            "value": "portega-recipeapp-BE-dev"
         },
         "appServiceAppNameFe": {
-            "value": "dsanmart-recipeapp-FE-dev"
+            "value": "portega-recipeapp-FE-dev"
         },
         "appServicePlanName": {
-            "value": "dsanmart-recipeapp-dev"
+            "value": "portega-recipeapp-dev"
         },
         "storageAccountName": {
-            "value": "dsanmartdevstorage"
+            "value": "portegadevstorage"
         },
         "dbname": {
-            "value": "dsanmart-recipeapp-db-dev"
+            "value": "portega-recipeapp-db-dev"
         }
     }
 }
