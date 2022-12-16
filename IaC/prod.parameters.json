@@ -6,19 +6,19 @@
             "value": "prod"
         },
         "appServiceAppNameBe": {
-            "value": "portega-recipeapp-BE-prod"
+            "value": "portega-assignment-be-prod"
         },
         "appServiceAppNameFe": {
-            "value": "portega-recipeapp-FE-prod"
+            "value": "portega-assignment-fe-prod"
         },
         "appServicePlanName": {
-            "value": "portega-recipeapp-prod"
+            "value": "portega-assignment-prod"
         },
         "storageAccountName": {
             "value": "portegaprodstorage"
         },
         "dbname": {
-            "value": "portega-recipeapp-db-prod"
+            "value": "portega-assignment-db-prod"
         }
     }
 }
