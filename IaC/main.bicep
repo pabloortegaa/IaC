@@ -21,6 +21,15 @@ param storageAccountName string = 'portega-storage'
   ])
 param environmentType string = 'nonprod'
 param location string = resourceGroup().location
+@secure()
+param dbhost string
+@secure()
+param dbuser string
+@secure()
+param dbpass string
+@secure()
+param dbname string
+
 var storageAccountSkuName = (environmentType == 'prod') ? 'Standard_GRS' : 'Standard_LRS'  
 var appServicePlanSkuName = (environmentType == 'prod') ? 'B1' : 'F1'
 
@@ -32,7 +41,7 @@ param postgreServerName string = 'jseijas-dbsrv'
 @sys.description('The PostgreSQL database name.')
 @minLength(3)
 @maxLength(30)
-param dbname string = 'portega--db'
+param dbnamee string = 'portega--db'
 
 resource storageAccount 'Microsoft.Storage/storageAccounts@2022-05-01' = {
   name: storageAccountName
@@ -59,6 +68,7 @@ resource appServicePlan 'Microsoft.Web/serverFarms@2022-03-01' = {
   sku: {
     name: appServicePlanSkuName
   }
+  
 }
 resource appServiceAppFe 'Microsoft.Web/sites@2022-03-01' = {
   name: appServiceAppNameFe
@@ -74,5 +84,27 @@ resource appServiceAppBe 'Microsoft.Web/sites@2022-03-01' = {
   properties: {
   serverFarmId: appServicePlan.id
   httpsOnly: true
+  siteConfig: {
+    linuxFxVersion: 'python|3.10'
+    appSettings: [
+      {
+        name: 'DB_HOST'
+        value: dbhost
+      }
+      {
+        name: 'DB_USER'
+        value: dbuser
+      }
+      {
+        name: 'DB_PASS'
+        value: dbpass
+      }
+      {
+        name: 'DB_NAME'
+        value: dbname
+      }
+    ]
   }
+  
+}
 }
