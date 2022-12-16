@@ -31,14 +31,7 @@ param storageAccountName string = 'portegastorage'
   ])
 param environmentType string = 'nonprod'
 param location string = resourceGroup().location
-@secure()
-param dbhost string
-@secure()
-param dbuser string
-@secure()
-param dbpass string
-@secure()
-param dbname string
+
 
 var storageAccountSkuName = (environmentType == 'prod') ? 'Standard_GRS' : 'Standard_LRS'  
 
@@ -60,10 +53,7 @@ module appService1 'modules/appStuff.bicep' = if (environmentType == 'prod') {
     location: location
     appServiceAppName: appServiceAppName1
     appServicePlanName: appServicePlanName1
-    dbhost: dbhost
-    dbuser: dbuser
-    dbpass: dbpass
-    dbname: dbname
+    
   }
 }
 
@@ -73,10 +63,6 @@ module appService3 'modules/appStuff.bicep' = if (environmentType == 'prod') {
     location: location
     appServiceAppName: appServiceAppName3
     appServicePlanName: appServicePlanName1
-    dbhost: dbhost
-    dbuser: dbuser
-    dbpass: dbpass
-    dbname: dbname
   }
 }
 
@@ -86,10 +72,6 @@ module appService2 'modules/appStuff.bicep' = if (environmentType == 'nonprod') 
     location: location
     appServiceAppName: appServiceAppName2
     appServicePlanName: appServicePlanName2
-    dbhost: dbhost
-    dbuser: dbuser
-    dbpass: dbpass
-    dbname: dbname
   }
 }
 
@@ -99,10 +81,6 @@ module appService4 'modules/appStuff.bicep' = if (environmentType == 'nonprod') 
     location: location
     appServiceAppName: appServiceAppName4
     appServicePlanName: appServicePlanName2
-    dbhost: dbhost
-    dbuser: dbuser
-    dbpass: dbpass
-    dbname: dbname
   }
 }
 
