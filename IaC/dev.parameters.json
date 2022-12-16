@@ -6,19 +6,19 @@
             "value": "nonprod"
         },
         "appServiceAppNameBe": {
-            "value": "portega-recipeapp-BE-dev"
+            "value": "portega-assignment-br-dev"
         },
         "appServiceAppNameFe": {
-            "value": "portega-recipeapp-FE-dev"
+            "value": "portega-assignment-be-dev"
         },
         "appServicePlanName": {
-            "value": "portega-recipeapp-dev"
+            "value": "portega-assignment-dev"
         },
         "storageAccountName": {
-            "value": "portegadevstorage"
+            "value": "portega-dev-storage"
         },
         "dbname": {
-            "value": "portega-recipeapp-db-dev"
+            "value": "portega-assignment-db-dev"
         }
     }
 }
