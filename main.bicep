@@ -1,26 +1,26 @@
 @sys.description('The Web App name.')
 @minLength(3)
 @maxLength(30)
-param appServiceAppName1 string = 'portega-assignment-be-pr'
+param appBEPR string = 'portega-assignment-be-pr'
 @sys.description('The Web App name.')
 @minLength(3)
 @maxLength(30)
-param appServiceAppName3 string = 'portega-assignment-fe-pr'
+param appFEPr string = 'portega-assignment-fe-pr'
 @sys.description('The App Service Plan name.')
 @minLength(3)
 @maxLength(30)
-param appServicePlanName1 string = 'portega-assignment-pr'
+param appServicePR string = 'portega-assignment-pr'
 @sys.description('The Web App name.')
 @minLength(3)
 @maxLength(30)
-param appServiceAppName2 string = 'portega-assignment-be-dv'
+param appBE_DV string = 'portega-assignment-be-dv'
 @minLength(3)
 @maxLength(30)
-param appServiceAppName4 string = 'portega-assignment-fe-dv'
+param appFE_DV string = 'portega-assignment-fe-dv'
 @sys.description('The App Service Plan name.')
 @minLength(3)
 @maxLength(30)
-param appServicePlanName2 string = 'portega-assignment-dv'
+param appServiceDV string = 'portega-assignment-dv'
 @sys.description('The Storage Account name.')
 @minLength(3)
 @maxLength(30)
@@ -47,43 +47,43 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2022-05-01' = {
     }
   }
 
-module appService1 'modules/appStuff.bicep' = if (environmentType == 'prod') {
-  name: 'appService1'
+module appBEPr 'modules/appStuff.bicep' = if (environmentType == 'prod') {
+  name: 'appBEPr'
   params: { 
     location: location
-    appServiceAppName: appServiceAppName1
-    appServicePlanName: appServicePlanName1
+    appServiceAppName: appBEPR
+    appServicePlanName: appServicePR
     
   }
 }
 
-module appService3 'modules/appStuff.bicep' = if (environmentType == 'prod') {
-  name: 'appService3'
+module appFEPR 'modules/appStuff.bicep' = if (environmentType == 'prod') {
+  name: 'appFEPR'
   params: { 
     location: location
-    appServiceAppName: appServiceAppName3
-    appServicePlanName: appServicePlanName1
+    appServiceAppName: appFEPr
+    appServicePlanName: appServicePR
   }
 }
 
-module appService2 'modules/appStuff.bicep' = if (environmentType == 'nonprod') {
-  name: 'appService2'
+module appBEDV 'modules/appStuff.bicep' = if (environmentType == 'nonprod') {
+  name: 'appBEDV'
   params: { 
     location: location
-    appServiceAppName: appServiceAppName2
-    appServicePlanName: appServicePlanName2
+    appServiceAppName: appBE_DV
+    appServicePlanName: appServiceDV
   }
 }
 
-module appService4 'modules/appStuff.bicep' = if (environmentType == 'nonprod') {
-  name: 'appService4'
+module appfedv 'modules/appStuff.bicep' = if (environmentType == 'nonprod') {
+  name: 'appfedv'
   params: { 
     location: location
-    appServiceAppName: appServiceAppName4
-    appServicePlanName: appServicePlanName2
+    appServiceAppName: appFE_DV
+    appServicePlanName: appServiceDV
   }
 }
 
-  output appServiceAppHostName1 string = (environmentType == 'prod') ? appService1.outputs.appServiceAppHostName : appService2.outputs.appServiceAppHostName
-  output appServiceAppHostName2 string = (environmentType == 'prod') ? appService3.outputs.appServiceAppHostName : appService4.outputs.appServiceAppHostName
+  output appServiceAppHostName1 string = (environmentType == 'prod') ? appBEPr.outputs.appServiceAppHostName : appBEDV.outputs.appServiceAppHostName
+  output appServiceAppHostName2 string = (environmentType == 'prod') ? appFEPR.outputs.appServiceAppHostName : appfedv.outputs.appServiceAppHostName
     
