@@ -6,10 +6,10 @@
             "value": "nonprod"
         },
         "appServiceAppNameBe": {
-            "value": "portega-assignment-br-dev"
+            "value": "portega-assignment-be-dev"
         },
         "appServiceAppNameFe": {
-            "value": "portega-assignment-be-dev"
+            "value": "portega-assignment-fe-dev"
         },
         "appServicePlanName": {
             "value": "portega-assignment-dev"
