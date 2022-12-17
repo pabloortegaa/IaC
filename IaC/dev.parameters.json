@@ -17,8 +17,9 @@
         "storageAccountName": {
             "value": "portegadevstorage"
         },
-        "dbname": {
+        "dbnamee": {
             "value": "portega-assignment-db-dev"
         }
+
     }
 }
