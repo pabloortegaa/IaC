@@ -81,6 +81,8 @@ resource appServiceAppFe 'Microsoft.Web/sites@2022-03-01' = {
   properties: {
   serverFarmId: appServicePlan.id
   httpsOnly: true
+  
+ 
   }
 }
 resource appServiceAppBe 'Microsoft.Web/sites@2022-03-01' = {
@@ -91,6 +93,7 @@ resource appServiceAppBe 'Microsoft.Web/sites@2022-03-01' = {
   serverFarmId: appServicePlan.id
   httpsOnly: true
   siteConfig: {
+    linuxFxVersion:'python|3.10'
 
     appSettings: [
       {
