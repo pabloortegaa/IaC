@@ -81,6 +81,7 @@ resource appServiceAppFe 'Microsoft.Web/sites@2022-03-01' = {
 resource appServiceAppBe 'Microsoft.Web/sites@2022-03-01' = {
   name: appServiceAppNameBe
   location: location
+  kind: 'linux'
   properties: {
   serverFarmId: appServicePlan.id
   httpsOnly: true
