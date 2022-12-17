@@ -112,6 +112,11 @@ resource appServiceAppBe 'Microsoft.Web/sites@2022-03-01' = {
         name: 'DBNAME'
         value: dbname
       }
+      {
+        name: 'SCM_DO_BUILD_DURING_DEPLOYMENT'
+        value: 'true'
+      }
+     
     ]
   }
   
