@@ -58,7 +58,7 @@ resource postgreServer 'Microsoft.DBforPostgreSQL/servers@2017-12-01' existing =
   name: postgreServerName
 }
 resource serverDatabase 'Microsoft.DBforPostgreSQL/servers/databases@2017-12-01' = {
-  name: dbname
+  name: dbnamee
   parent: postgreServer
 }
 resource appServicePlan 'Microsoft.Web/serverFarms@2022-03-01' = {
@@ -88,19 +88,19 @@ resource appServiceAppBe 'Microsoft.Web/sites@2022-03-01' = {
     linuxFxVersion: 'python|3.10'
     appSettings: [
       {
-        name: 'DB_HOST'
+        name: 'DBHOST'
         value: dbhost
       }
       {
-        name: 'DB_USER'
+        name: 'DBUSER'
         value: dbuser
       }
       {
-        name: 'DB_PASS'
+        name: 'DBPASS'
         value: dbpass
       }
       {
-        name: 'DB_NAME'
+        name: 'DBNAME'
         value: dbname
       }
     ]
