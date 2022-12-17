@@ -31,7 +31,7 @@ param dbpass string
 param dbname string
 
 var storageAccountSkuName = (environmentType == 'prod') ? 'Standard_GRS' : 'Standard_LRS'  
-var appServicePlanSkuName = (environmentType == 'prod') ? 'B1' : 'F1'
+var appServicePlanSkuName = (environmentType == 'prod') ? 'B1' : 'B1'
 
 @sys.description('The PostgreSQL server name.')
 @minLength(3)
